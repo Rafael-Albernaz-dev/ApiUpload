@@ -3,7 +3,7 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.use(require('./routes'));
+app.use(require('./Routes'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
