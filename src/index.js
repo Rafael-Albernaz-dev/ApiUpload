@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 
@@ -12,7 +13,7 @@ mongoose.connect('mongodb://localhost:27017/upload', {
 
 }),
 
-
+app.use(cors());
 app.use(require('./Routes'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
