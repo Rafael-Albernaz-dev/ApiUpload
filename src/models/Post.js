@@ -16,7 +16,7 @@ const PostSchema = new mongoose.Schema({
 
 PostSchema.pre('save', function() {
   if(!this.url) {
-    this.url = `https://api-image-upload.herokuapp.com//files/${this.name}`
+    this.url = `https://api-image-upload.herokuapp.com/files/${this.name}`
   }
 })
 
