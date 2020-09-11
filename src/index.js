@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 
 /* Database config */
-mongoose.connect('mongodb://localhost:27017/upload', {
+mongoose.connect('mongodb+srv://rafael:<albernaz123>@cluster0.brb7r.mongodb.net/<uploadDB>?retryWrites=true&w=majority/upload', {
   useNewUrlParser: true,
   useUnifiedTopology: true 
 
